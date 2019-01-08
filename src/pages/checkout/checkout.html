@@ -1,0 +1,35 @@
+<ion-header>
+    <ion-navbar color="danger">
+      <ion-title>Order</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+      <ion-item>
+          <ion-label>Username:</ion-label>
+          <ion-input [disabled]="true" type="text" [(ngModel)]="user.name" ></ion-input>
+        </ion-item>
+  
+    <ion-item>
+      <ion-label>Phone Number:</ion-label>
+      <ion-input [disabled]="true" type="text" [(ngModel)]="user.phoneNumber"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Address:</ion-label>
+        <ion-input type="text" [(ngModel)]="user.address"></ion-input>
+      </ion-item>
+
+    <ion-item>
+        <ion-label>Total Bill:</ion-label>
+      <ion-label>{{totalCartBill}}</ion-label>
+    </ion-item>
+  
+    <ion-row>
+      <ion-col text-center>
+        <button ion-button color="secondary" (click)="checkOut()" small>CheckOut</button>
+        <button ion-button color="danger" small (click)="cancel()">Cancel</button>
+      </ion-col>
+    </ion-row>
+  
+  </ion-content>
